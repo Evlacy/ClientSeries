@@ -1,0 +1,78 @@
+<!-- Copyright (c) Microsoft Corporation and Contributors. -->
+<!-- Licensed under the MIT License. -->
+
+<Page
+    x:Class="ClientSeries.Views.AddSeriePage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:ClientSeries.Views"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <RelativePanel Margin="20">
+
+        <TextBlock TextAlignment="Center" Text="Titre" Margin="10" Name="B1" RelativePanel.AlignHorizontalCenterWithPanel="True" Width="180"/>
+
+        <TextBox
+            Text="{Binding serieToAdd.Titre, Mode=TwoWay}"
+            Width="180"
+            Margin="5"
+            Name="BOX1"
+            RelativePanel.Below="B1"  RelativePanel.AlignHorizontalCenterWithPanel="True"/>
+
+        <TextBlock TextAlignment="Center" Width="180" Text="Resume" Margin="10" Name="B2" RelativePanel.Below="BOX1"  RelativePanel.AlignHorizontalCenterWithPanel="True"/>
+
+        <TextBox
+            Text="{Binding serieToAdd.Resume, Mode=TwoWay}"
+            Width="180"
+            Margin="5"
+            Name="BOX2"
+            RelativePanel.Below="B2"  RelativePanel.AlignHorizontalCenterWithPanel="True"/>
+
+        <TextBlock TextAlignment="Center" Width="180" Text="Nb saisons" Margin="15" Name="B3" RelativePanel.Below="BOX2"  RelativePanel.AlignHorizontalCenterWithPanel="True"/>
+
+        <TextBox
+            Text="{Binding serieToAdd.Nbsaisons, Mode=TwoWay}"
+            Width="180"
+            Margin="5"
+            Name="BOX3"
+            IsReadOnly="True"
+            RelativePanel.Below="B3"  RelativePanel.AlignHorizontalCenterWithPanel="True"/>
+
+        <TextBlock TextAlignment="Center" Width="180" Text="Nb episodes" Margin="15" Name="B4" RelativePanel.Below="BOX3"  RelativePanel.AlignHorizontalCenterWithPanel="True"/>
+
+        <TextBox
+            Text="{Binding serieToAdd.Nbepisodes, Mode=TwoWay}"
+            Width="180"
+            Margin="5"
+            Name="BOX4"
+            IsReadOnly="True"
+            RelativePanel.Below="B4"  RelativePanel.AlignHorizontalCenterWithPanel="True"/>
+
+        <TextBlock TextAlignment="Center" Width="180" Text="Annee creation" Margin="15" Name="B5" RelativePanel.Below="BOX4"  RelativePanel.AlignHorizontalCenterWithPanel="True"/>
+
+        <TextBox
+            Text="{Binding Anneecreation}"
+            Width="180"
+            Margin="5"
+            Name="BOX5"
+            IsReadOnly="True"
+            RelativePanel.Below="B5"  RelativePanel.AlignHorizontalCenterWithPanel="True"/>
+
+        <TextBlock TextAlignment="Center" Width="180" Text="Network" Margin="15" Name="B6" RelativePanel.Below="BOX5"  RelativePanel.AlignHorizontalCenterWithPanel="True"/>
+
+        <TextBox
+            Text="{Binding Network}"
+            Width="180"
+            Margin="5"
+            Name="BOX6"
+            IsReadOnly="True"
+            RelativePanel.Below="B6"  RelativePanel.AlignHorizontalCenterWithPanel="True"/>
+
+        <Button Click="Bouton_Click" Width="180" Content="Ajouter" Name="BTN" RelativePanel.Below="BOX6" Margin="10" RelativePanel.AlignHorizontalCenterWithPanel="True"/>
+
+
+    </RelativePanel>
+</Page>
