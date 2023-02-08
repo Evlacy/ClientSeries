@@ -1,6 +1,7 @@
 // Copyright (c) Microsoft Corporation and Contributors.
 // Licensed under the MIT License.
 
+using ClientSeries.ViewModels;
 using Microsoft.UI.Xaml;
 using Microsoft.UI.Xaml.Controls;
 using Microsoft.UI.Xaml.Controls.Primitives;
@@ -29,11 +30,8 @@ namespace ClientSeries.Views
         public AddSeriePage()
         {
             this.InitializeComponent();
-        }
-
-        private void Bouton_Click(object sender, RoutedEventArgs e)
-        {
-            
+            AddSerieViewModel addSerieViewModel = new AddSerieViewModel();
+            DataContext = addSerieViewModel;
         }
     }
 }
