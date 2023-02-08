@@ -22,17 +22,17 @@ namespace ClientSeries.ViewModels
 
         public IRelayCommand BtnPostSerie { get; }
 
-
-
-        public void ActionPostSerie()
+        public async void ActionPostSerie()
         {
             WSService Service = new WSService("https://apiseriesevlacy.azurewebsites.net");
 
             if (SerieToAdd.Titre == null)
                 MessageAsync("Erreur", "Il faut un titre !");
             else
-                Service.PostSerieAsync(SerieToAdd);
-            
+            {
+                await Service.PostSerieAsync(SerieToAdd);
+                MessageAsync("Informations", "La série a bien été ajouté.");
+            }
         }
     }
 }

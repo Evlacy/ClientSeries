@@ -10,6 +10,5 @@ namespace ClientSeries.ViewModels
     {
         void GetDataOnLoadAsync();
         void MessageAsync(string title, string message);
-
     }
 }

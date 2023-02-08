@@ -44,7 +44,19 @@ namespace ClientSeries.ViewModels
         public Serie SerieToAdd
         {
             get { return serieToAdd; }
-            set { serieToAdd = value; }
+            set { serieToAdd = value;
+                OnPropertyChanged();
+            }
+        }
+
+        private Serie actualSerie;
+
+        public Serie ActualSerie
+        {
+            get { return actualSerie; }
+            set { actualSerie = value;
+                OnPropertyChanged();
+            }
         }
 
 
