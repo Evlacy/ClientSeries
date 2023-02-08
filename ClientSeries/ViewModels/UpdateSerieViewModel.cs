@@ -44,6 +44,7 @@ namespace ClientSeries.ViewModels
             WSService Service = new WSService("https://apiseriesevlacy.azurewebsites.net");
             await Service.DeleteSerieAsync(ActualSerie.Serieid);
             MessageAsync("Informations", "La série a été supprimé !");
+            ActualSerie = null;
         }
     }
 }
