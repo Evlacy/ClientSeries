@@ -63,7 +63,7 @@ namespace ClientSeries
             MainRoot = m_window.Content as FrameworkElement;
         }
 
-        private Window m_window;
+        public Window m_window;
 
         public static FrameworkElement MainRoot { get; private set; }
 

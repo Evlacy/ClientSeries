@@ -69,7 +69,7 @@
             RelativePanel.Below="B6"  RelativePanel.AlignHorizontalCenterWithPanel="True"/>
 
         <Button Command="{Binding BtnPostSerie}" Width="180" Content="Ajouter" Name="BTN" RelativePanel.Below="BOX6" Margin="10" RelativePanel.AlignHorizontalCenterWithPanel="True"/>
-
+     
 
     </RelativePanel>
 </Page>
